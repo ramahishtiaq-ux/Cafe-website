@@ -30,4 +30,3 @@ npm run dev
 The site will be available at `http://localhost:3000`.
 =======
 # Cafe-website
->>>>>>> c9d277eef35737086e8c012ecc91d8926515166e
