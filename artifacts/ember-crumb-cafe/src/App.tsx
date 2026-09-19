@@ -133,7 +133,7 @@ function Home() {
             <span>Slow baked<br />since 2018</span>
           </div>
           <div className="relative aspect-[.87] overflow-hidden rounded-[48%_48%_5%_5%/35%_35%_5%_5%] bg-[#d8cbbb]">
-            <img src="/hero-cafe.jpg" alt="Coffee and a fresh croissant in warm morning light" className="h-full w-full object-cover" data-testid="img-hero-cafe" />
+            <img src={`${import.meta.env.BASE_URL}hero-cafe.jpg`} alt="Coffee and a fresh croissant in warm morning light" className="h-full w-full object-cover" data-testid="img-hero-cafe" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#342a21]/45 to-transparent p-7 pt-24 text-[#f8f1e5]">
               <p className="mono text-[10px] uppercase tracking-[.15em]">Corner table, 8:14am</p>
             </div>
@@ -158,7 +158,7 @@ function Home() {
       <section id="story" className="mx-auto grid max-w-[1440px] gap-12 px-5 py-24 sm:px-10 md:grid-cols-[.9fr_1.1fr] md:items-center md:gap-20 md:py-36 lg:px-16">
         <div className="reveal relative order-2 md:order-1">
           <div className="aspect-[.85] max-w-[490px] overflow-hidden rounded-[2px] bg-[#cfc2b1]">
-            <img src="/baker-hands.jpg" alt="Baker hands shaping a sourdough loaf" className="h-full w-full object-cover" data-testid="img-baker-hands" />
+            <img src={`${import.meta.env.BASE_URL}baker-hands.jpg`} alt="Baker hands shaping a sourdough loaf" className="h-full w-full object-cover" data-testid="img-baker-hands" />
           </div>
           <div className="absolute -bottom-7 -right-3 max-w-[245px] bg-[#556148] p-5 text-[#f5eddf] sm:-right-6">
             <p className="eyebrow mb-3 text-[#e5b967]">The daily ritual</p>
