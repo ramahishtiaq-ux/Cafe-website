@@ -11,7 +11,7 @@ type SecondParameter<T extends (...args: never) => unknown> = Parameters<T>[1];
  */
 export declare const getHealthCheckUrl: () => string;
 export declare const healthCheck: (options?: RequestInit) => Promise<HealthStatus>;
-export declare const getHealthCheckQueryKey: () => readonly ["/api/healthz"];
+export declare const getHealthCheckQueryKey: () => readonly [`/api/healthz`];
 export declare const getHealthCheckQueryOptions: <TData = Awaited<ReturnType<typeof healthCheck>>, TError = ErrorType<unknown>>(options?: {
     query?: UseQueryOptions<Awaited<ReturnType<typeof healthCheck>>, TError, TData>;
     request?: SecondParameter<typeof customFetch>;
