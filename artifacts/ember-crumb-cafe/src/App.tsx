@@ -57,7 +57,7 @@ function Home() {
 
   const menuItems = [
     { type: 'bakes', name: 'Butter croissant', detail: 'flaky layers, cultured butter', price: '$6', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80' },
-    { type: 'bakes', name: 'Twelve-hour sourdough', detail: 'cultured butter, sea salt', price: '$8', image: 'https://images.unsplash.com/photo-1589367920969-ab8e050eb0e9?w=800&q=80' },
+    { type: 'bakes', name: 'Twelve-hour sourdough', detail: 'cultured butter, sea salt', price: '$8', image: 'https://images.unsplash.com/photo-1585478259715-876ac6de0f5b?w=800&q=80' },
     { type: 'coffee', name: 'Oat milk cortado', detail: 'espresso, warm oat, cinnamon', price: '$6', image: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80' },
     { type: 'bakes', name: 'Brown butter morning bun', detail: 'orange, cardamom, raw sugar', price: '$6', image: 'https://images.unsplash.com/photo-1612203985729-70726954388c?w=800&q=80' },
     { type: 'coffee', name: 'Ember house filter', detail: 'honey process · Rwanda', price: '$5', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&q=80' },
