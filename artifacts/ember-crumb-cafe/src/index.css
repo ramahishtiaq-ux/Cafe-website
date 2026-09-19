@@ -138,17 +138,7 @@
 .reveal-delay-3 { transition-delay: .3s; }
 .menu-card img { transition: transform .6s cubic-bezier(.22,.8,.26,1); }
 .menu-card:hover img { transform: scale(1.04); }
-.menu-card .bun { background: #d8a15d; }
-.menu-card .bread { background: #9c5840; }
-.menu-card .coffee { background: #b8a697; }
-.menu-card .galette { background: #c8a96c; }
-.menu-card .cortado { background: #d3b08d; }
-.menu-card .cookie { background: #75624e; }
-.menu-card .coffee::after,
-.menu-card .cortado::after { content: ''; position: absolute; right: 15%; top: 20%; height: 55%; width: 30%; border: 12px solid #8f6449; border-radius: 48% 48% 42% 42%; background: #342a21; box-shadow: -18px 14px 0 #f0e2ca; }
-.menu-card .bread::after { content: ''; position: absolute; right: 13%; top: 14%; height: 68%; width: 42%; border-radius: 49% 47% 43% 46%; background: #c98748; transform: rotate(16deg); box-shadow: -18px 10px 0 #e6bf7c; }
-.menu-card .galette::after { content: ''; position: absolute; left: 23%; top: 20%; height: 58%; width: 53%; border-radius: 50%; background: #b96943; transform: rotate(-11deg); box-shadow: inset 0 -18px 0 #dda65d, 10px 13px 0 #f0d39b; }
-.menu-card .cookie::after { content: ''; position: absolute; left: 27%; top: 20%; height: 58%; width: 48%; border-radius: 50%; background: #b39063; transform: rotate(9deg); box-shadow: inset 10px -5px 0 #8c654b, 11px 14px 0 #5b493a; }
+
 .link-arrow span { transition: transform .25s ease; display: inline-block; }
 .link-arrow:hover span { transform: translateX(5px); }
 .soft-shadow { box-shadow: var(--shadow-sm); }

@@ -56,12 +56,12 @@ function Home() {
   };
 
   const menuItems = [
-    { type: 'bakes', name: 'Brown butter morning bun', detail: 'orange, cardamom, raw sugar', price: '$6', className: 'bun' },
-    { type: 'bakes', name: 'Twelve-hour sourdough', detail: 'cultured butter, sea salt', price: '$8', className: 'bread' },
-    { type: 'coffee', name: 'Ember house filter', detail: 'honey process · Rwanda', price: '$5', className: 'coffee' },
-    { type: 'bakes', name: 'Seasonal fruit galette', detail: 'oat streusel, crème fraîche', price: '$7', className: 'galette' },
-    { type: 'coffee', name: 'Oat milk cortado', detail: 'espresso, warm oat, cinnamon', price: '$6', className: 'cortado' },
-    { type: 'bakes', name: 'Black sesame cookie', detail: 'miso caramel, rye crumb', price: '$4', className: 'cookie' },
+    { type: 'bakes', name: 'Brown butter morning bun', detail: 'orange, cardamom, raw sugar', price: '$6', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80' },
+    { type: 'bakes', name: 'Twelve-hour sourdough', detail: 'cultured butter, sea salt', price: '$8', image: 'https://images.unsplash.com/photo-1589367920969-ab8e050eb0e9?w=800&q=80' },
+    { type: 'coffee', name: 'Ember house filter', detail: 'honey process · Rwanda', price: '$5', image: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&q=80' },
+    { type: 'bakes', name: 'Seasonal fruit galette', detail: 'oat streusel, crème fraîche', price: '$7', image: 'https://images.unsplash.com/photo-1612203985729-70726954388c?w=800&q=80' },
+    { type: 'coffee', name: 'Oat milk cortado', detail: 'espresso, warm oat, cinnamon', price: '$6', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&q=80' },
+    { type: 'bakes', name: 'Black sesame cookie', detail: 'miso caramel, rye crumb', price: '$4', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80' },
   ];
   const filteredItems = menuItems.filter((item) => menuFilter === 'all' || item.type === menuFilter);
 
@@ -197,12 +197,14 @@ function Home() {
           </div>
           <div className="grid gap-x-8 gap-y-0 sm:grid-cols-2 lg:grid-cols-3">
             {filteredItems.map((item, index) => (
-              <article key={item.name} className="menu-card reveal group border-b border-[#62534a] py-7" style={{ transitionDelay: `${index * 70}ms` }} data-testid={`card-menu-${item.className}`}>
-                <div className={`relative mb-5 aspect-[1.55] overflow-hidden ${item.className}`}>
+              <article key={item.name} className="menu-card reveal group border-b border-[#62534a] py-7" style={{ transitionDelay: `${index * 70}ms` }} data-testid={`card-menu-${item.name.replace(/\s+/g, '-').toLowerCase()}`}>
+                <div className="relative mb-5 aspect-[1.55] overflow-hidden bg-[#d8cbbb]">
                   <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03]">
-                    <div className="absolute left-[18%] top-[18%] h-[62%] w-[46%] rotate-[-8deg] rounded-[48%_48%_42%_42%] bg-[#d99b48] shadow-[12px_12px_0_#a74b35]" />
-                    <div className="absolute bottom-[12%] right-[14%] h-[45%] w-[32%] rounded-full bg-[#c9bcae]/80" />
-                    <span className="absolute bottom-4 left-5 mono text-[9px] uppercase tracking-[.16em] text-[#342a21]/60">{item.type === 'coffee' ? 'single origin' : 'made in house'}</span>
+                    <img src={item.image} alt={item.name} className="h-full w-full object-cover" />
+                    <div className="absolute inset-0 bg-black/10 transition-opacity group-hover:opacity-0" />
+                    <span className="absolute bottom-4 left-5 mono text-[9px] uppercase tracking-[.16em] text-[#f8f1e5] drop-shadow-md">
+                      {item.type === 'coffee' ? 'single origin' : 'made in house'}
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-start justify-between gap-4">
